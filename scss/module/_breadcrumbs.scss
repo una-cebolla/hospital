@@ -1,0 +1,35 @@
+@use "../global" as *;
+
+.top-breadcrumbs {
+    margin-top: rem(10);
+    @include mq("md") {
+        margin-top: rem(14);
+    }
+}
+
+.breadcrumbs__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs__items li {
+    font-size: rem(14);
+    line-height: calc(17 / 14);
+    color: $blue;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.breadcrumbs__items li:nth-child(n+2) {
+    margin-left: rem(6);
+}
+
+.breadcrumbs__items li:nth-child(n+2)::before {
+    content: "＞";
+    display: inline-block;
+    margin-right: rem(7);
+}
+
+.breadcrumbs__items li:last-child {
+    opacity: 1;
+}

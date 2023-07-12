@@ -1,0 +1,148 @@
+@use "../global" as *;
+
+.contact {
+    padding-top: rem(47);
+    padding-bottom: rem(100);
+    @include mq("md") {
+        padding-top: rem(129);
+        padding-bottom: rem(200);
+    }
+}
+
+.contact__inner {
+    @include mq("md") {
+        width: rem(1040);
+    }
+}
+
+.contact__title-title {
+    @include mq("md") {
+        margin-top: rem(7);
+        font-size: rem(30);
+    }
+}
+
+.contact__title-text {
+    margin-top: rem(35);
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    text-align: center;
+    @include mq("md") {
+        margin-top: rem(33);
+    }
+}
+
+.contact__title-text span {
+    display: inline-block;
+}
+
+.contact-form {
+    margin-top: rem(83);
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    padding: rem(22) rem(20) rem(100) rem(20);
+    background-color: $bg-blue;
+    box-shadow: rem(2) rem(2) rem(6) rgba($black, 0.05);
+    @include mq("md") {
+        margin-top: rem(118);
+        margin-right: 0;
+        margin-left: 0;
+        padding: rem(81) rem(124) rem(121) rem(124);
+    }
+}
+
+.contact-form__item {
+    @include mq("md") {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.contact-form__item:nth-child(n+2) {
+    margin-top: rem(38);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.contact-form__item label {
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+    display: flex;
+    align-items: center;
+}
+
+.contact-form__item--message label {
+    @include mq("md") {
+        margin-top: rem(-173);
+    }
+}
+
+.contact-form__required {
+    color: #FF7979;
+    display: inline-block;
+    margin-left: rem(16);
+    padding: rem(4) rem(6) 0 rem(6);
+    background-color: $white;
+    border: 1px solid #FF7979;
+    @include mq("md") {
+        padding: rem(5) rem(6) rem(1) rem(6);
+    }
+}
+
+.contact-form input[type=text],
+.contact-form input[type=tel],
+.contact-form input[type=email],
+.contact-form textarea {
+    margin-top: rem(13);
+    width: 100%;
+    background-color: $white;
+    padding: rem(15) rem(18) rem(15) rem(18);
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+    border-radius: rem(4);
+    @include mq("md") {
+        margin-top: 0;
+        width: rem(500);
+    }
+}
+
+.contact-form textarea {
+    height: rem(217);
+    @include mq("md") {
+        height: rem(217);
+    }
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #AFAFAF;
+}
+
+.contact-form__text {
+    margin-top: rem(50);
+    font-size: rem(14);
+    line-height: calc(21 / 14);
+    text-align: center;
+    @include mq("md") {
+        margin-top: rem(51);
+    }
+}
+
+.contact-form__btn {
+    margin-top: rem(73);
+    text-align: center;
+    transition: 0.3s;
+    @include mq("md") {
+        margin-top: rem(81);
+    }
+}
+
+.contact-form__btn span {
+    display: none;
+}
+
+.contact-form__btn:hover {
+    opacity: 0.7;
+}

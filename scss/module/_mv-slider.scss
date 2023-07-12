@@ -1,0 +1,10 @@
+@use "../global" as *;
+
+#mv-slider {
+    width: 100%;
+    height: max(calc(100vh - #{rem(90)}),500px);
+    @include mq("md") {
+        width: 100%;
+        height: max(calc(100vh - #{rem(190)}),600px);
+    }
+}

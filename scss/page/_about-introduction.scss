@@ -1,0 +1,129 @@
+@use "../global" as *;
+
+.about-introduction {
+    margin-top: rem(68);
+    position: relative;
+    @include mq("md") {
+        margin-top: rem(119);
+    }
+}
+
+.about-introduction__title {
+    font-size: rem(26);
+    line-height: calc(32 / 26);
+    font-weight: $regular;
+    text-align: center;
+    color: $blue;
+    @include mq("md") {
+        font-size: rem(40);
+        line-height: calc(60 / 40);
+    }
+}
+
+.about-introduction__img {
+    margin-top: rem(37);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+    box-shadow: rem(2) rem(3) rem(6) rgba($black, 0.05);
+    @include mq("md") {
+        margin-top: rem(70);
+        margin-left: 0;
+        margin-right: auto;
+        width: rem(1028);
+    }
+}
+
+.about-introduction__img img {
+    aspect-ratio: 375 / 250;
+    width: 100%;
+    object-fit: cover;
+    @include mq("md") {
+        aspect-ratio: 1028 / 686;
+    }
+}
+
+.about-introduction__body {
+    margin-top: rem(-48);
+    padding: rem(58) rem(20) rem(60) rem(20);
+    background-color: $white;
+    box-shadow: rem(2) rem(2) rem(6) rgba($black, 0.05);
+    position: relative;
+    z-index: 5;
+    @include mq("md") {
+        margin-top: rem(-486);
+        padding: rem(77) rem(40) rem(80) rem(40);
+        width: rem(880);
+        margin-left: auto;
+    }
+}
+
+.about-introduction__body p {
+    font-size: rem(14);
+    line-height: calc(21 / 14);
+    @include mq("md") {
+        font-size: rem(24);
+        line-height: calc(36 / 24);
+    }
+}
+
+.about-introduction__body p br {
+    @include brheight(8);
+}
+
+.about-introduction__body h3,
+.about-introduction__body h2 {
+    font-size: rem(20);
+    font-weight: $regular;
+    line-height: calc(30 / 20);
+    margin-top: rem(37);
+    @include mq("md") {
+        font-size: rem(30);
+        line-height: calc(45 / 30);
+        margin-top: rem(36);
+    }
+}
+
+.about-introduction__body h3+p,
+.about-introduction__body h2+p {
+    margin-top: rem(8);
+    @include mq("md") {
+        margin-top: 0;
+    }
+}
+
+.about-introduction__sign {
+    text-align: right;
+    margin-top: rem(77);
+    @include mq("md") {
+        margin-top: rem(102);
+    }
+}
+
+.about-introduction__sign span {
+    font-size: rem(14);
+    line-height: calc(21 / 14);
+    color: $black;
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: calc(20 / 16);
+    }
+}
+
+.about-introduction__sign-img {
+    margin-top: rem(4);
+    width: rem(100);
+    margin-left: auto;
+    @include mq("md") {
+        margin-top: rem(8);
+        width: rem(166);
+    }
+}
+
+.about-introduction__sign-img img {
+    aspect-ratio: 100 / 24;
+    object-fit: contain;
+    @include mq("md") {
+        aspect-ratio: 166 / 40;
+    }
+}

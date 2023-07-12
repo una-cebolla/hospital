@@ -1,0 +1,81 @@
+@use "../global" as *;
+
+.btn-arrow {
+    position: relative;
+    // ボタン形状
+    border: 1px solid $gray;
+    width: rem(290);
+    padding: rem(27) 0 rem(27);
+    display: inline-block;
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+    color: $gray;
+    outline: none;
+    background-color: $white;
+    // アニメーション設定
+    transition: all 0.2s linear;
+    @include mq("md") {
+        width: rem(320);
+        padding: rem(29) 0;
+        font-size: rem(18);
+        line-height: calc(22 / 18);
+    }
+}
+
+.btn-arrow:hover {
+    background-color: $blue;
+    color: $white;
+    opacity: 1;
+}
+
+.btn-arrow::before {
+    content: "";
+    // 下線の位置
+    position: absolute;
+    top: 50%;
+    right: rem(16);
+    // 下線の形状
+    width: rem(58);
+    height: 1px;
+    background-color: $gray;
+    // アニメーション設定
+    transition: all 0.2s linear;
+    @include mq("md") {
+        width: rem(80);
+        right: rem(-48);
+    }
+}
+
+.btn-arrow::after {
+    content: "";
+    // 矢印の位置
+    position: absolute;
+    top: 35%;
+    right: rem(21);
+    // 矢印の形状
+    width: 1px;
+    height: rem(12);
+    background-color: $gray;
+    transform: skewX(45deg);
+    // アニメーション設定
+    transition: all 0.2s linear;
+    @include mq("md") {
+        top: 37%;
+        height: rem(12);
+        right: rem(-43);
+    }
+}
+
+.btn-arrow:hover::before {
+    transform: translateX(rem(16));
+    @include mq("md") {
+        transform: translateX(rem(20));
+    }
+}
+
+.btn-arrow:hover::after {
+    transform: skewX(45deg) translateX(rem(16));
+    @include mq("md") {
+        transform: skewX(45deg) translateX(rem(20));
+    }
+}

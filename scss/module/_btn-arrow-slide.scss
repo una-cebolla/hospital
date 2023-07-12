@@ -1,0 +1,54 @@
+@use "../global" as *;
+
+.btn-arrow-slide {
+    @include mq("md") {
+        position: relative;
+    }
+}
+
+.btn-arrow-slide::before {
+    @include mq("md") {
+        content: "";
+        // 下線の位置  
+        position: absolute;
+        top: 50%;
+        right: rem(88);
+        // 下線の形状
+        width: rem(58);
+        height: 1px;
+        background-color: $gray;
+        // アニメーション設定
+        transition: all 0.3s;
+    }
+}
+
+.btn-arrow-slide::after {
+    @include mq("md") {
+        content: "";
+        // 矢印の位置
+        position: absolute;
+        top: 46%;
+        right: rem(88);
+        // 矢印の形状
+        width: rem(15);
+        height: 1px;
+        background-color: $gray;
+        transform: rotate(35deg);
+        // アニメーション設定
+        transition: all 0.3s;
+    }
+}
+
+.btn-arrow-slide:hover::before {
+    @include mq("md") {
+        transform: translateX(rem(20));
+        opacity: 0.7;
+    }
+}
+
+.btn-arrow-slide:hover::after {
+    @include mq("md") {
+        transform: rotate(35deg) translateX(rem(18)) translateY(rem(-12));
+        opacity: 0.7;
+    }
+}

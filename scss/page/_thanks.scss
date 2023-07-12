@@ -1,0 +1,35 @@
+@use "../global" as *;
+
+.thanks {
+    padding-top: rem(47);
+    padding-bottom: rem(100);
+    @include mq("md") {
+        padding-top: rem(129);
+        padding-bottom: rem(200);
+    }
+}
+
+.thanks__title-title {
+    @include mq("md") {
+        margin-top: rem(9);
+        font-size: rem(30);
+    }
+}
+
+.thanks__title p {
+    margin-top: rem(35);
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    text-align: center;
+    @include mq("md") {
+        margin-top: rem(32);
+    }
+}
+
+.thanks__btn {
+    margin-top: rem(83);
+    text-align: center;
+    @include mq("md") {
+        margin-top: rem(79);
+    }
+}

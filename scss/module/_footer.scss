@@ -1,0 +1,94 @@
+@use "../global" as *;
+
+.footer {
+    padding-top: rem(26);
+    background-color: $bg-blue;
+    @include mq("md") {
+        padding-top: 0;
+    }
+}
+
+.footer__nav {
+    @include mq("md") {
+        width: 50%;
+        height: rem(190);
+        margin-left: auto;
+    }
+}
+
+.footer__nav ul {
+    height: inherit;
+    align-items: flex-end;
+}
+
+.footer__logo-wrapper {
+    margin-top: rem(31);
+    @include mq("md") {
+        width: 50%;
+        height: rem(424);
+        margin-top: rem(-188);
+        display: flex;
+        align-items: center;
+    }
+}
+
+.footer__logo {
+    width: rem(180);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq("md") {
+        width: rem(350);
+    }
+}
+
+.footer__address {
+    margin-top: rem(31);
+    text-align: center;
+    color: $blue;
+    @include mq("md") {
+        width: 50%;
+        height: rem(235);
+        margin-left: auto;
+        margin-top: rem(-236);
+        padding-top: rem(40);
+    }
+}
+
+.footer__address-address {
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+    @include mq("md") {
+        font-size: rem(24);
+        line-height: calc(30 / 24);
+    }
+}
+
+.footer__address-tel {
+    font-size: rem(24);
+    line-height: calc(30 / 24);
+    margin-top: rem(10);
+    @include mq("md") {
+        font-size: rem(40);
+        line-height: calc(49 / 40);
+        margin-top: rem(6);
+    }
+}
+
+.footer__copy {
+    margin-top: rem(42);
+    padding-top: rem(11);
+    padding-bottom: rem(15);
+    background-color: $blue;
+    text-align: center;
+    @include mq("md") {
+        margin-top: 0;
+        padding-top: rem(36);
+        padding-bottom: rem(43);
+    }
+}
+
+.footer__copy small {
+    font-size: rem(12);
+    line-height: calc(15 / 12);
+    color: $white;
+}

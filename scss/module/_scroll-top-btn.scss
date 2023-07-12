@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.scroll-top-btn {
+    width: rem(45);
+    height: rem(45);
+    background-color: $gray;
+    border-radius: rem(20);
+    position: fixed;
+    z-index: 80;
+    right: rem(15);
+    bottom: rem(15);
+    cursor: pointer;
+    transition: 0.3s;
+    @include mq("md") {
+        width: rem(50);
+        height: rem(50);
+        right: rem(20);
+        bottom: rem(20);
+    }
+}
+
+.scroll-top-btn span {
+    display: block;
+    width: rem(10);
+    height: rem(10);
+    border-top: 2px solid $white;
+    border-right: 2px solid $white;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    @include mq("md") {
+        width: rem(12);
+        height: rem(12);
+    }
+}
+
+.js-scroll {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.js-scroll.is-fadein {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn.is-fadein:hover {
+    opacity: 0.7;
+}

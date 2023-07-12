@@ -1,0 +1,82 @@
+@use "../global" as *;
+
+.contents-mv {
+    width: 100%;
+    position: relative;
+}
+
+.contents-mv__img {
+    width: 100%;
+}
+
+.contents-mv__img::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.contents-mv__img img {
+    aspect-ratio: 375 / 220;
+    object-fit: cover;
+    object-position: center;
+    @include mq("md") {
+        aspect-ratio: 1920 / 300;
+    }
+}
+
+.treatment-mv-img img,
+.post-treatment-mv-img img {
+    @include mq("md") {
+        object-position: 50% 48%;
+    }
+}
+
+.contact-mv-img img {
+    @include mq("md") {
+        object-position: 50% 58%;
+    }
+}
+
+.contents-mv__text {
+    color: $white;
+    text-align: center;
+    position: absolute;
+    z-index: 15;
+    top: 49%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include mq("md") {
+        top: 51%;
+    }
+}
+
+.contents-mv__slug {
+    font-size: rem(60);
+    line-height: calc(74 / 60);
+    text-transform: capitalize;
+    @include mq("md") {
+        font-size: rem(80);
+        line-height: calc(99 / 80);
+    }
+}
+
+.contents-mv__title {
+    margin-top: rem(3);
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+    font-weight: $regular;
+    @include mq("md") {
+        margin-top: 0;
+        font-size: rem(24);
+        line-height: calc(30 / 24);
+    }
+}

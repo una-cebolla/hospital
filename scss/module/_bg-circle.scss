@@ -1,0 +1,80 @@
+@use "../global" as *;
+
+.bg-circle {
+    width: rem(725);
+    height: rem(725);
+    background-color: rgba($bg-blue, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    @include mq("md") {
+        width: rem(725);
+        height: rem(725);
+        background-color: $bg-blue;
+    }
+}
+
+.top-mv .bg-circle {
+    left: rem(-550);
+    bottom: rem(-253);
+    @include mq("md") {
+        left: rem(-170);
+        bottom: rem(-257);
+    }
+}
+
+.top-news .bg-circle {
+    right: rem(-504);
+    bottom: rem(-651);
+    @include mq("md") {
+        right: rem(-362);
+        bottom: rem(-442);
+    }
+}
+
+.top-contents-outer .bg-circle {
+    left: rem(-537);
+    top: rem(1058);
+    @include mq("md") {
+        width: rem(707);
+        height: rem(707);
+        left: rem(-353);
+        top: rem(624);
+    }
+}
+
+.top-contact .bg-circle {
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(0);
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.about-introduction .bg-circle:nth-child(2) {
+    display: none;
+    @include mq("md") {
+        display: block;
+        top: rem(12);
+        right: rem(-270);
+    }
+}
+
+.about-introduction .bg-circle:nth-child(3) {
+    display: none;
+    @include mq("md") {
+        display: block;
+        bottom: rem(-202);
+        left: rem(-270);
+    }
+}
+
+.about-hospital .bg-circle {
+    display: none;
+    @include mq("md") {
+        display: block;
+        bottom: rem(-115);
+        right: rem(-164);
+    }
+}

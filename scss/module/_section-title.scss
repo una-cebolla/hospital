@@ -1,0 +1,47 @@
+@use "../global" as *;
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title__img {
+    width: rem(60);
+    @include mq("md") {
+        width: rem(70)
+    }
+}
+
+.section-title__img img {
+    width: 100%;
+    aspect-ratio: 60 / 50;
+    object-fit: contain;
+    @include mq("md") {
+        aspect-ratio: 70 / 58;
+    }
+}
+
+.section-title__title {
+    margin-top: rem(7);
+    font-size: rem(26);
+    font-weight: $regular;
+    line-height: calc(32 / 26);
+    @include mq("md") {
+        margin-top: rem(11);
+        font-size: rem(40);
+        line-height: calc(49 / 40);
+    }
+}
+
+.section-title__slug {
+    margin-top: rem(8);
+    font-size: rem(12);
+    line-height: calc(15 / 12);
+    text-transform: capitalize;
+    @include mq("md") {
+        margin-top: rem(10);
+        font-size: rem(16);
+        line-height: calc(20 /16);
+    }
+}

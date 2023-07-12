@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.treatment-cat-outer {
+    margin-top: rem(80);
+    padding-bottom: rem(96);
+    @include mq("md") {
+        margin-top: rem(114);
+        padding-bottom: rem(191);
+    }
+}
+
+.treatment-cat-outer .treatment-cat:nth-child(n+2) {
+    margin-top: rem(76);
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+}

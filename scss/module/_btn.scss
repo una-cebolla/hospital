@@ -1,0 +1,23 @@
+@use "../global" as *;
+
+.btn {
+    display: inline-block;
+    width: rem(290);
+    padding-top: rem(27);
+    padding-bottom: rem(27);
+    background-color: $blue;
+    border: 1px solid $gray;
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+    color: $white;
+    text-align: center;
+    @include mq("md") {
+        width: rem(320);
+        padding-top: rem(29);
+        padding-bottom: rem(26);
+        border: 1px solid $blue;
+        box-shadow: rem(2) rem(2) rem(6) rgba($black, 0.16);
+        font-size: rem(18);
+        line-height: calc(22 / 18);
+    }
+}

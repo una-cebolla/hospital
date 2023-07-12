@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.hamburger {
+    width: rem(27);
+    height: rem(27);
+    position: relative;
+    z-index: 100;
+    transition: 0.3s;
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.hamburger__bar {
+    display: block;
+    width: rem(27);
+    height: 4px;
+    background-color: $blue;
+    position: absolute;
+    transition: 0.3s;
+    border-radius: 2px;
+    transform: scale(1, 0.5);
+}
+
+.hamburger__bar:nth-of-type(1) {
+    top: rem(4.7);
+}
+
+.hamburger__bar:nth-of-type(2) {
+    top: rem(11.5);
+}
+
+.hamburger__bar:nth-of-type(3) {
+    top: rem(18.3);
+}
+
+.hamburger.is-open .hamburger__bar:nth-of-type(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg) scale(1, 0.5);
+}
+
+.hamburger.is-open .hamburger__bar:nth-of-type(2) {
+    opacity: 0;
+    transform: translateY(-50%) scale(1, 0.5);
+}
+
+.hamburger.is-open .hamburger__bar:nth-of-type(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg) scale(1, 0.5);
+}

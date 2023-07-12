@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+.treatment-btns {
+    margin-top: rem(45);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    @include mq("md") {
+        width: rem(1120);
+        margin-top: rem(129);
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        column-gap: rem(80);
+        row-gap: rem(40);
+        flex-wrap: wrap;
+    }
+}

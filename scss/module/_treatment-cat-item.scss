@@ -1,0 +1,45 @@
+@use "../global" as *;
+
+.treatment-cat-item {
+    width: rem(335);
+    margin-left: auto;
+    margin-right: auto;
+    @include mq("md") {
+        width: rem(400);
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.treatment-cat-item__img {
+    width: rem(220);
+    border-radius: 50%;
+    box-shadow: rem(2) rem(2) rem(6) rgba($black, 0.05);
+    margin-left: auto;
+    margin-right: auto;
+    @include mq("md") {
+        width: rem(280);
+    }
+}
+
+.treatment-cat-item__img img {
+    border-radius: 50%;
+    aspect-ratio: 220 / 220;
+    object-fit: cover;
+    @include mq("md") {
+        aspect-ratio: 280 / 280;
+    }
+}
+
+.treatment-cat-item__title {
+    margin-top: rem(24);
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+    font-weight: $regular;
+    text-align: center;
+    @include mq("md") {
+        margin-top: rem(19);
+        font-size: rem(24);
+        line-height: calc(30 / 24);
+    }
+}

@@ -1,0 +1,38 @@
+@use "../global" as *;
+
+.news {
+    margin-top: rem(45);
+    padding-bottom: rem(82);
+    @include mq("md") {
+        margin-top: rem(129);
+        padding-bottom: rem(200);
+    }
+}
+
+.news__inner {
+    @include mq("md") {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.news-items__wrapper {
+    @include mq("md") {
+        width: rem(1100);
+        margin-left: rem(60);
+    }
+}
+
+.news__item:nth-child(n+2) {
+    margin-top: rem(28);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.news-side__wrapper {
+    margin-top: rem(97);
+    @include mq("md") {
+        margin-top: 0;
+    }
+}

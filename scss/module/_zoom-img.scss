@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+.zoom-img img {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.zoom-img a:hover {
+    opacity: 1;
+}
+
+.zoom-img a:hover img {
+    transform: scale(1.2);
+}
+
+.zoom-img__mask {
+    overflow: hidden;
+}

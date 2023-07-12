@@ -1,0 +1,80 @@
+@use 'sass:math';
+
+// インナー幅設定(pxのまま)
+$inner: 1520px;
+
+// 余白
+$padding-pc: 20px;
+$padding-sp: 20px;
+
+// font-family
+$base-font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+
+// font-weight
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+body {
+  font-family: $base-font-family;
+  font-weight: $regular;
+}
+
+// 色指定
+$black: #000;
+$white: #fff;
+$gray: #707070;
+$blue: #4C6A84;
+$bg-blue: #EBF5FE;
+body {
+  color: $gray;
+}
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+// メディアクエリ
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+// メディアクエリを "@include mq(){}" で書くことができる
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// ハンバーガーメニュー表示中の背景固定
+body.fixed {
+  height: 100%;
+  overflow: hidden;
+}
+html.fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
+// 横幅固定、横スクロール禁止
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+// 高さあり改行コード
+@mixin brheight($height) {
+  content: "";
+  display: block;
+  margin-top: math.div($height, 16) * 1rem;
+  @include mq("md") {
+      margin-top: 0;
+  }
+}

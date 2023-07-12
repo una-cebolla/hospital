@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+.treatment-cat-body {
+    margin-top: rem(43);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(36);
+    @include mq("md") {
+        width: rem(1320);
+        margin-top: rem(59);
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        column-gap: rem(60);
+        row-gap: rem(60);
+        flex-wrap: wrap;
+    }
+}

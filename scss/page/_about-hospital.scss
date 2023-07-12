@@ -1,0 +1,71 @@
+@use "../global" as *;
+
+.about-hospital {
+    margin-top: rem(117);
+    padding-bottom: rem(100);
+    position: relative;
+    @include mq("md") {
+        margin-top: rem(154);
+        padding-bottom: rem(200);
+    }
+}
+
+.about-hospital__title {
+    font-size: rem(26);
+    line-height: calc(32 / 26);
+    font-weight: $regular;
+    text-align: center;
+    color: $blue;
+    @include mq("md") {
+        font-size: rem(30);
+        line-height: calc(37 / 30);
+    }
+}
+
+.about-hospital__text {
+    margin-top: rem(35);
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    @include mq("md") {
+        margin-top: rem(88);
+        font-size: rem(24);
+        line-height: calc(36 / 24);
+        width: rem(1010);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.about-hospital__text br {
+    @include brheight(10);
+}
+
+.about-hospital__img-container {
+    margin-top: rem(72);
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: rem(30);
+    @include mq("md") {
+        margin-top: rem(86);
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: rem(60);
+        column-gap: rem(85);
+    }
+}
+
+.about-hospital__img {
+    width: 100%;
+    box-shadow: rem(2) rem(2) rem(6) rgba($black, 0.05);
+    @include mq("md") {
+        width: rem(450);
+    }
+}
+
+.about-hospital__img img {
+    aspect-ratio: 335 / 248;
+    width: 100%;
+    object-fit: cover;
+    @include mq("md") {
+        aspect-ratio: 450 / 333;
+    }
+}
